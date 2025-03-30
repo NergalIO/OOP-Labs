@@ -1,0 +1,209 @@
+2025-03-31 02:51:59 [DEBUG] (class Game) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Game) Game created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Logger created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) DialogueSystem created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<0> as start dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<1> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<0> to Dialogue<1>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<2> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<1> to Dialogue<2>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<3> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<2> to Dialogue<3>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<4> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<3> to Dialogue<4>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<5> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<4> to Dialogue<5>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<6> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<5> to Dialogue<6>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<7> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<6> to Dialogue<7>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<8> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<7> to Dialogue<8>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<9> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<8> to Dialogue<9>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<10> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<9> to Dialogue<10>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<11> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<10> to Dialogue<11>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<12> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<11> to Dialogue<12>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<13> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<12> to Dialogue<13>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<14> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<13> to Dialogue<14>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<15> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<14> to Dialogue<15>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<16> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<15> to Dialogue<16>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<17> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<16> to Dialogue<17>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<18> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<17> to Dialogue<18>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<19> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<18> to Dialogue<19>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<20> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<19> to Dialogue<20>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<21> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<20> to Dialogue<21>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<22> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<21> to Dialogue<22>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<23> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<22> to Dialogue<23>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<24> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<23> to Dialogue<24>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<25> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<24> to Dialogue<25>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<26> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<25> to Dialogue<26>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<27> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<26> to Dialogue<27>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<28> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<27> to Dialogue<28>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<29> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<28> to Dialogue<29>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Dialogue<0> created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Selecting Dialogue<30> as end dialogue
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<29> to Dialogue<30>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<8>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<8> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<3>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<3> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Adding choice to Dialogue<3>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Added choice with text: Hack into the station's systems
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<14>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<14> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<7>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<7> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Adding choice to Dialogue<7>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Added choice with text: Escape through the hatch
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<20>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<20> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<12>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<12> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Adding choice to Dialogue<12>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Added choice with text: Activate the device
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<22>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<22> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Searching Dialogue<18>
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Dialogue<18> found
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Adding choice to Dialogue<18>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Added choice with text: Dive into the black hole
+2025-03-31 02:51:59 [DEBUG] (class Game) Game started
+2025-03-31 02:51:59 [DEBUG] (class Entity) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Entity) Entity<0> created
+2025-03-31 02:51:59 [DEBUG] (class Inventory) Logger created
+2025-03-31 02:51:59 [DEBUG] (class Inventory) Inventory created
+2025-03-31 02:51:59 [DEBUG] (class DialogueSystem) Executing Dialogue<0>
+2025-03-31 02:51:59 [DEBUG] (class Dialogue) Displaying Dialogue<0>
+2025-03-31 02:52:00 [DEBUG] (class Dialogue) Returning from Dialogue<0> with no choice
+2025-03-31 02:52:00 [DEBUG] (class DialogueSystem) Selected next Dialogue<1>
+2025-03-31 02:52:00 [DEBUG] (class DialogueSystem) Dialogue<1> finished
+2025-03-31 02:52:00 [DEBUG] (class DialogueSystem) Executing Dialogue<1>
+2025-03-31 02:52:00 [DEBUG] (class Dialogue) Displaying Dialogue<1>
+2025-03-31 02:52:01 [DEBUG] (class Dialogue) Returning from Dialogue<1> with no choice
+2025-03-31 02:52:01 [DEBUG] (class DialogueSystem) Selected next Dialogue<2>
+2025-03-31 02:52:01 [DEBUG] (class DialogueSystem) Dialogue<2> finished
+2025-03-31 02:52:01 [DEBUG] (class DialogueSystem) Executing Dialogue<2>
+2025-03-31 02:52:01 [DEBUG] (class Dialogue) Displaying Dialogue<2>
+2025-03-31 02:52:03 [DEBUG] (class Dialogue) Returning from Dialogue<2> with no choice
+2025-03-31 02:52:03 [DEBUG] (class DialogueSystem) Selected next Dialogue<3>
+2025-03-31 02:52:03 [DEBUG] (class DialogueSystem) Dialogue<3> finished
+2025-03-31 02:52:03 [DEBUG] (class DialogueSystem) Executing Dialogue<3>
+2025-03-31 02:52:03 [DEBUG] (class Dialogue) Displaying Dialogue<3>
+2025-03-31 02:52:05 [DEBUG] (class Dialogue) Updated next dialogue for Dialogue<3> to Dialogue<8>
+2025-03-31 02:52:05 [DEBUG] (class Dialogue) Selected choice 1 for Dialogue<3>
+2025-03-31 02:52:05 [DEBUG] (class Dialogue) Returning from Dialogue<3> with choice <0>
+2025-03-31 02:52:05 [DEBUG] (class DialogueSystem) Selected next Dialogue<4>
+2025-03-31 02:52:05 [DEBUG] (class DialogueSystem) Dialogue<4> finished
+2025-03-31 02:52:05 [DEBUG] (class DialogueSystem) Executing Dialogue<4>
+2025-03-31 02:52:05 [DEBUG] (class Dialogue) Displaying Dialogue<4>
+2025-03-31 02:52:07 [DEBUG] (class Dialogue) Returning from Dialogue<4> with no choice
+2025-03-31 02:52:07 [DEBUG] (class DialogueSystem) Selected next Dialogue<9>
+2025-03-31 02:52:07 [DEBUG] (class DialogueSystem) Dialogue<9> finished
+2025-03-31 02:52:07 [DEBUG] (class DialogueSystem) Executing Dialogue<9>
+2025-03-31 02:52:07 [DEBUG] (class Dialogue) Displaying Dialogue<9>
+2025-03-31 02:52:09 [DEBUG] (class Dialogue) Returning from Dialogue<9> with no choice
+2025-03-31 02:52:09 [DEBUG] (class DialogueSystem) Selected next Dialogue<10>
+2025-03-31 02:52:09 [DEBUG] (class DialogueSystem) Dialogue<10> finished
+2025-03-31 02:52:09 [DEBUG] (class DialogueSystem) Executing Dialogue<10>
+2025-03-31 02:52:09 [DEBUG] (class Dialogue) Displaying Dialogue<10>
+2025-03-31 02:52:10 [DEBUG] (class Dialogue) Returning from Dialogue<10> with no choice
+2025-03-31 02:52:10 [DEBUG] (class DialogueSystem) Selected next Dialogue<11>
+2025-03-31 02:52:10 [DEBUG] (class DialogueSystem) Dialogue<11> finished
+2025-03-31 02:52:10 [DEBUG] (class DialogueSystem) Executing Dialogue<11>
+2025-03-31 02:52:10 [DEBUG] (class Dialogue) Displaying Dialogue<11>
+2025-03-31 02:52:11 [DEBUG] (class Game) Starting save game
+2025-03-31 02:52:11 [DEBUG] (class Game) Saving game states
+2025-03-31 02:52:11 [DEBUG] (class Game) Saving game objects
+2025-03-31 02:52:11 [DEBUG] (class Game) Saving player
+2025-03-31 02:52:11 [DEBUG] (class Inventory) Save inventory
+2025-03-31 02:52:11 [DEBUG] (class Inventory) Saving 0 items
+2025-03-31 02:52:11 [DEBUG] (class Game) Saving entities
+2025-03-31 02:52:11 [DEBUG] (class Game) Game destroyed
+2025-03-31 02:52:11 [DEBUG] (class Game) Logger destroyed
+2025-03-31 02:52:11 [DEBUG] (class Inventory) Inventory destroyed
+2025-03-31 02:52:11 [DEBUG] (class Inventory) Logger destroyed
+2025-03-31 02:52:11 [DEBUG] (class Entity) Entity<0> destroyed
+2025-03-31 02:52:11 [DEBUG] (class Entity) Logger destroyed
+2025-03-31 02:52:11 [DEBUG] (class DialogueSystem) DialogueSystem destroyed
