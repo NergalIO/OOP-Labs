@@ -98,35 +98,34 @@ public:
 		std::cout << "- Name    : "  << name    << std::endl;
 		std::cout << "- Health  : "  << health  << std::endl;
 		std::cout << "- Damage  : "  << damage  << std::endl;
-		std::cout << "- Defense : "  << defense << std::endl << std::endl;
+		std::cout << "- Defense : "  << defense << std::endl;
 	}
 
 	virtual void save(std::ofstream& file) {
-		size_t strSize;
-		strSize = type.size();
-		file.write(reinterpret_cast<const char*>(&strSize), sizeof(strSize));
+		size_t strSize = type.size();
+		file.write(reinterpret_cast<const char*>(&strSize), 1);
 		file.write(type.c_str(), strSize);
 		strSize = name.size();
-		file.write(reinterpret_cast<const char*>(&strSize), sizeof(strSize));
+		file.write(reinterpret_cast<const char*>(&strSize), 1);
 		file.write(name.c_str(), strSize);
-		file.write(reinterpret_cast<const char*>(&health), sizeof(health));
-		file.write(reinterpret_cast<const char*>(&damage), sizeof(damage));
-		file.write(reinterpret_cast<const char*>(&defense), sizeof(defense));
-		file.write(reinterpret_cast<const char*>(&expByKill), sizeof(expByKill));
+		file.write(reinterpret_cast<const char*>(&health), 2);
+		file.write(reinterpret_cast<const char*>(&damage), 2);
+		file.write(reinterpret_cast<const char*>(&defense), 2);
+		file.write(reinterpret_cast<const char*>(&expByKill), 2);
 	}
 
 	virtual void load(std::ifstream& file) {
-		size_t strSize;
-		file.read(reinterpret_cast<char*>(&strSize), sizeof(strSize));
+		size_t strSize = 0;
+		file.read(reinterpret_cast<char*>(&strSize), 1);
 		type.resize(strSize);
 		file.read(&type[0], strSize);
-		file.read(reinterpret_cast<char*>(&strSize), sizeof(strSize));
+		file.read(reinterpret_cast<char*>(&strSize), 1);
 		name.resize(strSize);
 		file.read(&name[0], strSize);
-		file.read(reinterpret_cast<char*>(&health), sizeof(health));
-		file.read(reinterpret_cast<char*>(&damage), sizeof(damage));
-		file.read(reinterpret_cast<char*>(&defense), sizeof(defense));
-		file.read(reinterpret_cast<char*>(&expByKill), sizeof(expByKill));
+		file.read(reinterpret_cast<char*>(&health), 2);
+		file.read(reinterpret_cast<char*>(&damage), 2);
+		file.read(reinterpret_cast<char*>(&defense), 2);
+		file.read(reinterpret_cast<char*>(&expByKill), 2);
 	}
 };
 
@@ -197,27 +196,27 @@ public:
 		Entity::attack(target);
 		
 		if (!target.isAlive())
-			gainExperience(expByKill);
+			gainExperience(target.getExpByKill());
 	}
 
 	void display() override {
 		Entity::display();
 		std::cout << "- Level   : " << level      << std::endl;
-		std::cout << "- Exp     : " << experience << "/" << (level + 1) * 100 << std::endl << std::endl;
+		std::cout << "- Exp     : " << experience << "/" << (level + 1) * 100 << std::endl;
 	}
 
 	void save(std::ofstream& file) override {
 		Entity::save(file);
-		file.write(reinterpret_cast<const char*>(&level), sizeof(level));
-		file.write(reinterpret_cast<const char*>(&experience), sizeof(experience));
+		file.write(reinterpret_cast<const char*>(&level), 1);
+		file.write(reinterpret_cast<const char*>(&experience), 2);
 		inventory->save(file);
 
 	}
 
 	void load(std::ifstream& file) override {
 		Entity::load(file);
-		file.read(reinterpret_cast<char*>(&level), sizeof(level));
-		file.read(reinterpret_cast<char*>(&experience), sizeof(experience));
+		file.read(reinterpret_cast<char*>(&level), 1);
+		file.read(reinterpret_cast<char*>(&experience), 2);
 		inventory->load(file);
 	}
 };

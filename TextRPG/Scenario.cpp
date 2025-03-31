@@ -2,7 +2,7 @@
 #include "Game.h" 
 
 void Scenario::execute(Game& game) {
-	logger.debug("Scenario started");
+	logger->debug("Scenario started");
 
 	this->player = std::make_shared<Character>(playerName, playerHealth, playerDamage, playerDefense, playerLevel, playerExperience);
 	game.setPlayer(this->player);

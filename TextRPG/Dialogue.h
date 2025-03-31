@@ -106,37 +106,31 @@ public:
         std::cout << "\033[0m" << std::endl;
     }
 
-    size_t choose(void* param, bool output = true, int choice = -1) const {
-        if (!output)
-            return -1;
-
-        if (choice != -1) {
-            choices[choice]->execute(param);
+    size_t choose(void* param, bool output = true, int choice = 255) const {
+        if (choice == 255 && !output)
             return choice;
-        }
 
-        while (true && choice == -1)
+        while (choice - 1 < 0 || choice - 1 >= choices.size())
         {
-            display(output);
-            for (size_t i = 0; i < choices.size(); ++i)
-            {
-                std::cout << "- " << i + 1 << "." << choices[i]->getText() << std::endl;
-                std::this_thread::sleep_for(std::chrono::milliseconds(50));
+            if (output) {
+                display(output);
+                for (size_t i = 0; i < choices.size(); ++i)
+                {
+                    std::cout << "- " << i + 1 << "." << choices[i]->getText() << std::endl;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+                }
+                std::cout << "\033[35m[?] Enter your choice: ";
             }
-            std::cout << "\033[35m[?] Enter your choice: ";
-            size_t choice;
             std::cin >> choice;
             std::cin.ignore();
-            std::cout << "\033[0m" << std::endl;
             if (choice - 1 < 0 || choice - 1 >= choices.size())
-            {
                 std::cout << "\033[31m[-] Invalid choice" << "\033[0m" << std::endl;
-                continue;
-            }
-            choices[choice - 1]->execute(param);
-            logger->debug("Selected choice " + std::to_string(choice) + " for Dialogue<" + std::to_string(id) + ">");
-            return choice - 1;
+            else
+                break;
         }
+        choices[choice - 1]->execute(param);
+        logger->debug("Selected choice " + std::to_string(choice) + " for Dialogue<" + std::to_string(id) + ">");
+        return choice;
     }
 
     int execute(void* param, bool output = true) {
@@ -165,7 +159,8 @@ private:
     std::shared_ptr<Logger<DialogueSystem>> logger = std::make_shared<Logger<DialogueSystem>>();
 public:
     DialogueSystem()
-        : choices(std::make_shared<std::vector<int>>()), allDialogues(std::make_shared<std::vector<std::shared_ptr<Dialogue>>>()) {
+        : choices(std::make_shared<std::vector<int>>()),
+        allDialogues(std::make_shared<std::vector<std::shared_ptr<Dialogue>>>()) {
         logger->debug("DialogueSystem created");
     }
 
@@ -286,29 +281,42 @@ public:
         logger->debug("DialogueSystem finished");
     }
 
+    void fastTravel(std::shared_ptr<std::vector<int>> choices) {
+        currentDialogue = startDialogue;
+		for (auto& choice : *choices) {
+            if (currentDialogue->hasChoice() && choice != 255)
+                currentDialogue->choose(nullptr, false, choice);
+            currentDialogue = currentDialogue->getNextDialogue();
+		}
+    }
+
     void save(std::ofstream& file) {
-        file.write(reinterpret_cast<const char*>(choices->size()), sizeof(choices->size()));
+        size_t size = choices->size();
+        file.write(reinterpret_cast<const char*>(&size), 2);
         logger->debug("Saving " + std::to_string(choices->size()) + " choices");
         for (auto& choice : *choices) {
-            file.write(reinterpret_cast<const char*>(&choice), sizeof(choice));
+            file.write(reinterpret_cast<const char*>(&choice), 1);
         }
     }
 
     void load(std::ifstream& file) {
         size_t size = 0;
-        file.read(reinterpret_cast<char*>(&size), sizeof(size));
+        file.read(reinterpret_cast<char*>(&size), 2);
+        logger->debug("Loading " + std::to_string(size) + " choices");
         choices->clear();
         for (size_t i = 0; i < size; ++i) {
             int choice = 0;
-            file.read(reinterpret_cast<char*>(&choice), sizeof(choice));
+            file.read(reinterpret_cast<char*>(&choice), 1);
             choices->push_back(choice);
         }
 
-        currentDialogue = startDialogue;
-        for (size_t choice = 0; choice < choices->size(); ++choice) {
-            if (currentDialogue->hasChoice())
-                currentDialogue->choose(nullptr, false, choice);
-            currentDialogue = currentDialogue->getNextDialogue();
+        if (startDialogue) {
+            logger->debug("Dialog tree recovery");
+            fastTravel(choices);
+        }
+        else {
+            logger->debug("No start dialogue found, skipping recovery dialog tree");
+			choices->clear();
         }
     }
 };

@@ -63,23 +63,6 @@ public:
             fightDialogueSystem->addChoiceToDialogue("Show your data", [&](void*) {
                 player->display();
                 }, nullptr, 0);
-            fightDialogueSystem->addChoiceToDialogue("Try to escape", [&](void*) {
-                int chance = std::max(10, static_cast<int>(100 / entities->size()));
-                if (rand() % 100 < chance) {
-                    logger->debug("Player escaped");
-                    std::cout << "\033[32m" << "[~] You successfully escaped" << "\033[0m" << std::endl;
-                    *isFighting = false;
-                }
-                else if (rand() % 100 < chance / 2) {
-                    logger->debug("While the player was trying to escape, the monster attacked him");
-                    std::cout << "\033[31m" << "[~] While you were trying to escape, the monster attacked you" << "\033[0m" << std::endl;
-                    entities->at(rand() % entities->size())->attack(*player);
-                }
-                else {
-                    logger->debug("Player failed to escape");
-                    std::cout << "\033[31m" << "[~] You failed to escape" << "\033[0m" << std::endl;
-                }
-                }, nullptr, 0);
 
             for (auto& entity : *entities) {
                 if (!entity->isAlive())
@@ -137,8 +120,8 @@ public:
 
         logger->debug("Saving game states");
         // Save game state
-        file.write(reinterpret_cast<const char*>(&(*isGameOverFlag)), sizeof(*isGameOverFlag));
-        file.write(reinterpret_cast<const char*>(&(*isFighting)), sizeof(*isFighting));
+        file.write(reinterpret_cast<const char*>(&(*isGameOverFlag)), 1);
+        file.write(reinterpret_cast<const char*>(&(*isFighting)), 1);
 
         logger->debug("Saving game objects");
         // Save player
@@ -146,13 +129,13 @@ public:
         player->save(file);
 
         // Save scenario
-        //logger->debug("Saving scenario");
-        //scenario->save(file);
+        logger->debug("Saving scenario");
+        scenario->save(file);
 
         // Save entities
-		logger->debug("Saving entities");
         size_t entityCount = entities->size();
-        file.write(reinterpret_cast<const char*>(&entityCount), sizeof(entityCount));
+        logger->debug("Saving " + std::to_string(entityCount) + " entities");
+        file.write(reinterpret_cast<const char*>(&entityCount), 1);
         for (const auto& entity : *entities) {
             logger->debug("Saving entity<" + std::to_string(entity->getId()) + ">");
             entity->save(file);
@@ -160,6 +143,7 @@ public:
     }
 
     void load(const std::string& filename) {
+        logger->debug("Loading game");
         std::ifstream file(filename, std::ios::binary);
 
         if (!file) {
@@ -168,20 +152,27 @@ public:
         }
 
         // Load game state
-        file.read(reinterpret_cast<char*>(&(*isGameOverFlag)), sizeof(*isGameOverFlag));
-        file.read(reinterpret_cast<char*>(&(*isFighting)), sizeof(*isFighting));
+		logger->debug("Loading game states");
+        file.read(reinterpret_cast<char*>(&(*isGameOverFlag)), 1);
+        file.read(reinterpret_cast<char*>(&(*isFighting)), 1);
 
         // Load player
+		logger->debug("Loading player");
         player = std::make_shared<Character>();
         player->load(file);
 
         // Load scenario
-        //scenario = std::make_shared<Scenario>();
-        //scenario->load(file);
+		logger->debug("Loading scenario");
+        if (!scenario)
+            scenario = std::make_shared<Scenario>();
+        scenario->load(file);
 
         // Load entities
         size_t entityCount;
-        file.read(reinterpret_cast<char*>(&entityCount), sizeof(entityCount));
+        file.read(reinterpret_cast<char*>(&entityCount), 1);
+        if (entityCount > 20)
+            entityCount = 0;
+        logger->debug("Loading " + std::to_string(entityCount) + " entities");
         entities->clear();
         for (size_t i = 0; i < entityCount; ++i) {
             auto entity = std::make_shared<Entity>();

@@ -27,6 +27,9 @@
     <ClInclude Include="Items.h">
       <Filter>Header</Filter>
     </ClInclude>
+    <ClInclude Include="Scenario.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">

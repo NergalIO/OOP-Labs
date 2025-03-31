@@ -133,6 +133,7 @@
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="Scenario.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entity.h" />

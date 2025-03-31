@@ -75,32 +75,32 @@ public:
     }
 
     void save(std::ofstream& file) const {
-        file.write(reinterpret_cast<const char*>(&id), sizeof(id));
+        file.write(reinterpret_cast<const char*>(&id), 1);
         size_t strSize = name.size();
-        file.write(reinterpret_cast<const char*>(&strSize), sizeof(strSize));
+        file.write(reinterpret_cast<const char*>(&strSize), 1);
         file.write(name.c_str(), strSize);
 
         strSize = description.size();
-        file.write(reinterpret_cast<const char*>(&strSize), sizeof(strSize));
+        file.write(reinterpret_cast<const char*>(&strSize), 1);
         file.write(description.c_str(), strSize);
 
-        file.write(reinterpret_cast<const char*>(&count), sizeof(count));
-        file.write(reinterpret_cast<const char*>(&maxCount), sizeof(maxCount));
+        file.write(reinterpret_cast<const char*>(&count), 1);
+        file.write(reinterpret_cast<const char*>(&maxCount), 1);
     }
 
     void load(std::ifstream& file) {
-        file.read(reinterpret_cast<char*>(&id), sizeof(id));
-        size_t strSize;
-        file.read(reinterpret_cast<char*>(&strSize), sizeof(strSize));
+        file.read(reinterpret_cast<char*>(&id), 1);
+        size_t strSize = 0;
+        file.read(reinterpret_cast<char*>(&strSize), 1);
         name.resize(strSize);
         file.read(&name[0], strSize);
 
-        file.read(reinterpret_cast<char*>(&strSize), sizeof(strSize));
+        file.read(reinterpret_cast<char*>(&strSize), 1);
         description.resize(strSize);
         file.read(&description[0], strSize);
 
-        file.read(reinterpret_cast<char*>(&count), sizeof(count));
-        file.read(reinterpret_cast<char*>(&maxCount), sizeof(maxCount));
+        file.read(reinterpret_cast<char*>(&count), 1);
+        file.read(reinterpret_cast<char*>(&maxCount), 1);
     }
 };
 
@@ -181,7 +181,7 @@ public:
     void save(std::ofstream& file) {
         logger.debug("Save inventory");
         size_t itemCount = items.size();
-        file.write(reinterpret_cast<const char*>(&itemCount), sizeof(itemCount));
+        file.write(reinterpret_cast<const char*>(&itemCount), 1);
         logger.debug("Saving " + std::to_string(itemCount) + " items");
         for (const auto& item : items) {
 			logger.debug("Saving item " + item->getName());
@@ -191,8 +191,8 @@ public:
 
     void load(std::ifstream& file) {
         logger.debug("Load inventory");
-        size_t itemCount;
-        file.read(reinterpret_cast<char*>(&itemCount), sizeof(itemCount));
+        size_t itemCount = 0;
+        file.read(reinterpret_cast<char*>(&itemCount), 1);
         items.clear();
         for (size_t i = 0; i < itemCount; ++i) {
             auto item = std::make_shared<Item>();
